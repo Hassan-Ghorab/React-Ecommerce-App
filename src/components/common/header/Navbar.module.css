@@ -1,0 +1,147 @@
+.navbar {
+  padding: 30px 0 15px;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 70px;
+}
+
+.mainNav {
+  display: flex;
+  gap: 40px;
+}
+
+.menuBtn {
+  display: none;
+}
+
+.menuNavIcons[name='close-outline'] {
+  display: none;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.form {
+  display: flex;
+  margin-left: 150px;
+}
+
+.searchInput {
+  padding: 0 20px;
+  width: 250px;
+  height: 35px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  background: #f4f4f5
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat bottom 10px right 15px;
+}
+
+@media (max-width: 1050px) {
+  .mainNav {
+    gap: 15px;
+  }
+
+  .searchInput {
+    width: 200px;
+  }
+}
+
+@media (max-width: 950px) {
+  .logo {
+    margin-right: 30px;
+  }
+
+  .mainNav {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 860px) {
+  .navbar {
+    padding: 20px 0 100px;
+  }
+
+  .mainNav {
+    display: none;
+  }
+
+  .navOpen .mainNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 15;
+    background-color: #fff;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    transition: all 0.5s;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+  .navOpen .menuNavIcons[name='close-outline'] {
+    display: block;
+    top: -50px;
+    color: #000;
+  }
+
+  .navOpen .menuNavIcons[name='menu-outline'] {
+    display: none;
+  }
+
+  .menuNavIcons {
+    position: relative;
+    z-index: 20;
+  }
+
+  .form {
+    position: absolute;
+    top: 120px;
+    left: 5dvw;
+    right: 5dvw;
+    width: 90dvw;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    display: flex;
+    margin-left: 0;
+  }
+
+  .searchInput {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 850px) and (min-width: 768px) {
+  .form {
+    position: absolute;
+    top: 80px;
+  }
+}

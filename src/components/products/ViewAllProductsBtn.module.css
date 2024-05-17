@@ -1,0 +1,11 @@
+.viewAllProductsBtnContainer {
+  text-align: center;
+  margin: 40px;
+}
+
+.viewAllProductsBtn {
+  background-color: #db4444;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 3px;
+}

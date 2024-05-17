@@ -1,0 +1,123 @@
+.loginContainer {
+  display: flex;
+  margin: 40px 0 80px;
+}
+
+.loginImageContainer {
+  width: 805px;
+}
+
+.loginImage {
+  max-width: 100%;
+}
+
+.loginFormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 340px;
+  margin: 0 auto;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginFormContainer h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.loginFormContainer p {
+  margin-bottom: 10px;
+}
+
+.loginFormContainer input {
+  all: unset;
+  padding: 30px 0 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.loginFormContainer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mainLogin {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 10px;
+}
+
+.loginBtn {
+  width: 145px;
+  height: 55px;
+  background-color: #db4444;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.forgetPasswordBtn {
+  color: #db4444;
+}
+
+.loginWithGoogleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 40px;
+  gap: 10px;
+  border-radius: 3px;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.signUpPage {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.signUpPage a {
+  text-decoration: underline;
+  margin-left: 10px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 1050px) {
+  .loginContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .loginImageContainer {
+    width: 500px;
+  }
+}
+
+@media (max-width: 900px) {
+  .loginImageContainer {
+    width: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .loginImageContainer {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+}
+

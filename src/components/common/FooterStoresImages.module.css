@@ -1,0 +1,4 @@
+.storesImages {
+  display: flex;
+  flex-direction: column;
+}

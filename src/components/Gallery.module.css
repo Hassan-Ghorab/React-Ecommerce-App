@@ -1,0 +1,109 @@
+.galleryContainer {
+  margin: 40px 0;
+}
+.productSubTitle {
+  display: flex;
+  align-items: center;
+  color: #db4444;
+  font-weight: 600;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.productSubTitle::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 40px;
+  background-color: #db4444;
+  margin-right: 20px;
+  border-radius: 3px;
+}
+
+.productMainTitle {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.gallery {
+  color: #fafafa;
+  display: flex;
+  gap: 20px;
+}
+
+.galleryOne {
+  flex: 1;
+  height: 530px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.galleryTwo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.firstGallery {
+  background-color: #000;
+  height: 230px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 20px;
+}
+
+.secondGallery {
+  display: flex;
+  gap: 20px;
+}
+
+.speakersGallery,
+.PerfumeGallery {
+  background-color: #000;
+  width: 50%;
+  height: 280px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 20px;
+}
+
+.speakersGallery img,
+.PerfumeGallery img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.gallery a {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    flex-direction: column;
+  }
+
+  .galleryOne {
+    height: 600px;
+  }
+
+  .speakersGallery,
+  .PerfumeGallery {
+    height: 330px;
+  }
+}
+
+@media (max-width: 550px) {
+  .speakersGallery,
+  .PerfumeGallery {
+    height: 270px;
+  }
+}

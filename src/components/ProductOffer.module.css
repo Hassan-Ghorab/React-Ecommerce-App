@@ -1,0 +1,50 @@
+.productOffer {
+  color: white;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin: 40px 0;
+  height: 500px;
+}
+
+.productOfferText {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.productOfferText span {
+  display: none;
+}
+
+.offerCountdownTimer div {
+
+}
+
+.productOfferText h4 {
+  color: #00ff66;
+}
+
+.productOfferText h2 {
+  font-size: 48px;
+}
+
+.productOfferText button {
+  width: 171px;
+  height: 56px;
+  text-align: center;
+  border-radius: 4px;
+  background: #00ff66;
+}
+
+.productOfferImage {
+  max-width: 560px;
+}
+
+@media (max-width: 767px) {
+  .productOffer {
+    flex-direction: column;
+  }
+}

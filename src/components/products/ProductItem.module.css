@@ -1,0 +1,86 @@
+.productDetails {
+  position: relative;
+  background-color: #f5f5f5;
+}
+
+.image {
+  width: 250px;
+  height: 250px;
+}
+
+.productName {
+  font-weight: normal;
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.productPrice {
+  display: flex;
+  gap: 10px;
+}
+
+.falsePrice {
+  text-decoration: line-through;
+}
+
+.productDiscount {
+  color: #db4444;
+}
+
+.cartOperationsContainer {
+  width: 100%;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  padding: 5px 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.productContainer:hover .cartOperationsContainer {
+  opacity: 1;
+}
+
+.cartOperationsContainer button {
+  width: 100%;
+}
+
+.productsReviewsContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.hr {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.productShowInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productSubInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.productDiscountPercentage {
+  padding: 5px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #db4444;
+}
+
+.productStatus {
+  padding: 5px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #00ff66;
+}

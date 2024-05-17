@@ -1,0 +1,103 @@
+.signUpContainer {
+  display: flex;
+  margin: 40px 0 80px;
+}
+
+.signUpImageContainer {
+  width: 805px;
+}
+
+.signUpImage {
+  max-width: 100%;
+}
+
+.signUpFormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 340px;
+  margin: 0 auto;
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.signUpFormContainer h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.signUpFormContainer p {
+  margin-bottom: 10px;
+}
+
+.signUpFormContainer input {
+  all: unset;
+  padding: 30px 0 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.signUpFormContainer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 40px;
+  gap: 10px;
+  border-radius: 3px;
+}
+
+.createAccount {
+  margin-top: 40px;
+  color: #fff;
+  background-color: #db4444;
+}
+
+.singUpWithGoogleBtn {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.loginPage {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.loginPage a {
+  text-decoration: underline;
+  margin-left: 10px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 1050px) {
+  .signUpContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .signUpImageContainer {
+    width: 500px;
+  }
+}
+
+@media (max-width: 900px) {
+  .signUpImageContainer {
+    width: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .signUpContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signUpImageContainer {
+    width: 150px;
+  }
+}

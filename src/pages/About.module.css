@@ -1,0 +1,161 @@
+.ourStoryContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aboutBanner {
+  width: 700px;
+  height: 600px;
+  background-color: #eb7ea8;
+}
+
+.ourStoryText {
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.ourStoryText h2 {
+  font-size: 55px;
+}
+
+.ourStoryText p {
+  max-width: 450px;
+}
+
+.aboutInfos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 90px 0;
+}
+
+.aboutInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 270px;
+  height: 230px;
+  border: 1px solid rgb(209 213 219);
+  border-radius: 3px;
+}
+
+.aboutInfo:hover {
+  background-color: #db4444;
+  color: #fff;
+}
+
+.aboutInfo svg circle {
+  fill: black;
+  stroke: #fafafa;
+}
+
+.aboutInfo:hover svg circle {
+  fill: #fafafa;
+  stroke: #000;
+}
+
+.aboutInfo:hover svg path {
+  fill: #fafafa;
+  stroke: #000;
+}
+
+.aboutCreators {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.creatorImageContainer {
+  width: 320px;
+  height: 380px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+.creatorImage {
+  max-width: 236px;
+  max-height: 350px;
+}
+
+.creatorSocial {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.creatorsBullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.creatorsBullets button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 10px;
+}
+
+.creatorsBullets .creatorActiveBullet {
+  background-color: #db4444;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1050px) {
+  .ourStoryText {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .aboutInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 210px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .aboutInfos {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .aboutCreators {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .ourStoryContainer {
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 50px;
+  }
+
+  .ourStoryText {
+    display: flex;
+    order: 1;
+  }
+
+  .aboutBanner {
+    max-width: 320px;
+  }
+}

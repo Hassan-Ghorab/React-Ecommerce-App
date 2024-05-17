@@ -1,0 +1,17 @@
+.categories {
+  border-right: 1px solid #f5f5f5;
+  width: 230px;
+  padding-top: 30px;
+}
+
+.arrowCategory {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  margin-bottom: 20px;
+}
+

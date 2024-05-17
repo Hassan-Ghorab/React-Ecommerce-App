@@ -1,0 +1,31 @@
+.notFoundContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFoundTitle {
+  font-size: 110px;
+  margin-bottom: 30px;
+}
+
+.notFoundContainer p {
+  text-align: center;
+}
+
+.backHome {
+  display: block;
+  margin: 70px 0 120px;
+  padding: 20px 50px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #db4444;
+}
+
+@media (max-width: 770px) {
+  .notFoundTitle {
+    font-size: 50px;
+    text-align: center;
+  }
+}

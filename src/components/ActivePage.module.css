@@ -1,0 +1,16 @@
+.ActivePageLinks {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  margin: 70px 0;
+}
+
+.notActiveLink {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767px) {
+  .ActivePageLinks {
+    margin: 40px 0;
+  }
+}

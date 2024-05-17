@@ -1,0 +1,139 @@
+.accountName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accountUsername {
+  width: 250px;
+}
+
+.accountUsername span {
+color: #db4444;
+}
+
+.accountInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 130px;
+}
+
+.accountInfo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.accountInfo a {
+  display: block;
+  margin: 0 0 10px 20px;
+}
+
+.activePage {
+  color: #db4444;
+}
+
+.accountForm {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 50px;
+  border-radius: 3px;
+  width: 870px;
+  max-width: 90dvw;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  margin: 0 auto;
+}
+
+.titleForm {
+  margin-bottom: 20px;
+  color: #db4444;
+}
+
+.accountForm input {
+  height: 40px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #f5f5f5;
+  font-size: 16px;
+}
+
+.userName,
+.emailAddress {
+  display: flex;
+  gap: 40px;
+}
+
+.userName,
+.emailAddress {
+  margin-bottom: 20px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.inputContainer {
+  width: 50%;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accountFormBtns {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.saveChangesBtn {
+  width: 200px;
+  height: 50px;
+
+  text-align: center;
+  color: #fff;
+  background-color: #db4444;
+  border-radius: 3px;
+}
+
+@media (max-width: 850px) {
+  .accountName {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .accountInfoContainer {
+    flex-direction: column;
+  }
+
+  .accountForm {
+    margin-bottom: 50px;
+    padding: 20px;
+  }
+
+  .accountPages {
+    display: flex;
+    order: 1;
+    flex-direction: column;
+  }
+
+  .inputContainer {
+    width: 100%;
+  }
+
+  .userName,
+  .emailAddress {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+}

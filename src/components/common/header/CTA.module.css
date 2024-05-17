@@ -1,0 +1,42 @@
+.offer {
+  background-color: #000000;
+  margin-bottom: 30px;
+}
+
+.offerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.offerText,
+.shopNowLink {
+  color: white;
+}
+
+.shopNowLink {
+  text-decoration: underline;
+}
+
+.selectLanguages {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: transparent;
+}
+
+.selectLanguages option {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767px) {
+  .emptyDiv {
+    display: none;
+  }
+
+  .offerText {
+    color: white;
+    width: 250px;
+  }
+}

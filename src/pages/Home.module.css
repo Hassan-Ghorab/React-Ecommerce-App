@@ -1,0 +1,31 @@
+.productSubTitle {
+  display: flex;
+  align-items: center;
+  color: #db4444;
+  font-weight: 600;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.productSubTitle::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 40px;
+  background-color: #db4444;
+  margin-right: 20px;
+  border-radius: 3px;
+}
+
+.productMainTitle {
+  font-size: 36px;
+}
+
+
+@media (max-width: 767px) {
+  .homeTitle {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+}

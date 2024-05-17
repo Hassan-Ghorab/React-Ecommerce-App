@@ -1,0 +1,13 @@
+.heroSectionContainer {
+  display: flex;
+  gap: 30px;
+}
+
+
+@media (max-width: 767px) {
+  .heroSectionContainer {
+    flex-direction: column;
+    align-items: center;
+    max-width: 95dvw;
+  }
+}

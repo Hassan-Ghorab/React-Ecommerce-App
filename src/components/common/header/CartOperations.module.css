@@ -1,0 +1,58 @@
+.cartOperations {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+}
+
+.wishlistIconContainer,
+.cartIconContainer,
+.personInfoContainer {
+  position: relative;
+}
+
+.wishlistItemsNumber,
+.cartItemsNumber {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #db4444;
+  z-index: 10;
+}
+
+.personOperations {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 230px;
+  padding: 10px;
+  z-index: 10;
+  border-radius: 3px;
+  color: #fff;
+  background-color: rgba(102, 100, 100, 0.9);
+}
+
+.personOperations a,
+.personOperations button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.personOperations a svg,
+.personOperations button svg {
+  width: 30px;
+  height: 30px;
+}
+
+.closePersonOperations {
+  display: none;
+}
