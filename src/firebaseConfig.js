@@ -3,7 +3,7 @@ import { getAuth } from 'firebase/auth';
 import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
-  apiKey:  import.meta.env.VITE_API_KEY,
+  apiKey: 'AIzaSyBXnd9jn8X2Ag2z6-96_HZP_JCX5ycQaxc',
   authDomain: 'exclusive-ecommerce-app-8d6fd.firebaseapp.com',
   projectId: 'exclusive-ecommerce-app-8d6fd',
   storageBucket: 'exclusive-ecommerce-app-8d6fd.appspot.com',
