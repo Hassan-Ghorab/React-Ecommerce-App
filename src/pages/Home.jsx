@@ -69,7 +69,7 @@ function Home() {
               {i18n.t('bestSelling.thisMonth')}
             </p>
             <h2 className={styles.productMainTitle}>
-              {i18n.t('bestSelling.bestSellingProduct')}
+              {i18n.t('bestSelling.bestSellingProducts')}
             </h2>
           </div>
         </ProductTitle>
