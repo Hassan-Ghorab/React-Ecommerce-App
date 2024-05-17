@@ -20,7 +20,6 @@
 }
 
 .offerCountdownTimer div {
-
 }
 
 .productOfferText h4 {
@@ -46,5 +45,6 @@
 @media (max-width: 767px) {
   .productOffer {
     flex-direction: column;
+    height: 700px;
   }
 }
