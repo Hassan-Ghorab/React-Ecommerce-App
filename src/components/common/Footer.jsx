@@ -47,7 +47,7 @@ function Footer() {
             <h4>{i18n.t('footer.account')}</h4>
             <Link to="/myAccount">{i18n.t('footer.myAccount')}</Link>
             <div>
-              <Link to="/login">{i18n.t('footer.login')}</Link> /
+              <Link to="/login">{i18n.t('footer.login')} </Link> 
               <Link to="/signup">{i18n.t('footer.register')}</Link>
             </div>
             <Link to="/cart">{i18n.t('footer.cart')}</Link>

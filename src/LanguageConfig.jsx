@@ -191,6 +191,7 @@ const languageResources = {
         backToHomePageLink: 'Back to home page',
         returnToShopLink: 'Return to Shop',
         updateCartButton: 'Update Cart',
+        viewAll: 'View All',
       },
 
       aboutPage: {
@@ -428,6 +429,7 @@ const languageResources = {
         backToHomePageLink: 'العودة إلى الصفحة الرئيسية',
         returnToShopLink: 'العودة إلى المتجر',
         updateCartButton: 'تحديث السلة',
+        viewAll: 'عرض الكل',
       },
 
       aboutPage: {

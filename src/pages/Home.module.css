@@ -21,6 +21,20 @@
   font-size: 36px;
 }
 
+.product {
+  margin-bottom: 100px;
+}
+
+.productTitleContainer {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.viewAllBtnContainer {
+  margin: 40px 0;
+}
 
 @media (max-width: 767px) {
   .homeTitle {

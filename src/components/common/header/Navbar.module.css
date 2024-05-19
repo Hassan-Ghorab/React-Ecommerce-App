@@ -80,6 +80,11 @@
     display: none;
   }
 
+  .mainNav a {
+    font-size: 30px;
+    padding: 10px 0;
+  }
+
   .navOpen .mainNav {
     position: fixed;
     top: 0;

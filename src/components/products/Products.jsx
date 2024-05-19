@@ -1,19 +1,12 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
-import ViewAllProductsBtn from './ViewAllProductsBtn';
 import styles from './Products.module.css';
 import ProductItem from './ProductItem';
 import ProductOperations from './ProductOperations';
 import { useWishlist } from '../context/WishlistContext';
 import { Link } from 'react-router-dom';
 
-function Product({ products, children, containerRef }) {
+function Product({ products, children, containerRef, viewAll }) {
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
-  const [viewAll, setViewAll] = useState(false);
-
-  const toggleViewAll = () => {
-    setViewAll(!viewAll);
-  };
 
   const handleToggleWishlist = (productItem) => {
     if (isInWishlist(productItem.id)) {
@@ -100,11 +93,6 @@ function Product({ products, children, containerRef }) {
           ))}
         </div>
       </div>
-      <div className={styles.viewAllBtnContainer}>
-        <ViewAllProductsBtn onToggleViewAll={toggleViewAll} />
-      </div>
-
-      <hr className={styles.hr} />
     </div>
   );
 }
