@@ -125,11 +125,13 @@ function ProductDetails() {
                 </div>
               ))}
             </div>
-            <img
-              className={styles.mainProductDetailsImage}
-              src={mainImage || product.image}
-              alt={language === 'en' ? product.tile : product.title_ar}
-            />
+            <div className={styles.mainProductDetailsImageContainer}>
+              <img
+                className={styles.mainProductDetailsImage}
+                src={mainImage || product.image}
+                alt={language === 'en' ? product.tile : product.title_ar}
+              />
+            </div>
           </div>
 
           <div className={styles.productDetailsInfo}>
@@ -352,7 +354,9 @@ function ProductDetails() {
         </div>
 
         <div>
-          <h2 className={styles.productTitle}>{i18n.t('productDetailsPage.relatedItems')}</h2>
+          <h2 className={styles.productTitle}>
+            {i18n.t('productDetailsPage.relatedItems')}
+          </h2>
           {relatedProducts && relatedProducts.length > 0 ? (
             <div className={styles.productCategoryContainer}>
               {relatedProducts.map((relatedProduct) => (

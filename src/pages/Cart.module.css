@@ -29,10 +29,16 @@
   gap: 10px;
 }
 
-.cartImage {
-  border-radius: 3px;
+
+.cartImageContainer {
   width: 50px;
 }
+
+.cartImageContainer .cartImage {
+  border-radius: 3px;
+  max-width: 50px;
+}
+
 
 .cartQuantity {
   display: flex;

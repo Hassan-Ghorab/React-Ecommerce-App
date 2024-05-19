@@ -79,11 +79,13 @@ function Cart() {
                   />
                 </svg>
               </button>
-              <img
-                src={item.image}
-                alt={language === 'en' ? item.title : item.title_ar}
-                className={styles.cartImage}
-              />
+              <div className={styles.cartImageContainer}>
+                <img
+                  src={item.image}
+                  alt={language === 'en' ? item.title : item.title_ar}
+                  className={styles.cartImage}
+                />
+              </div>
 
               <h4>{language === 'en' ? item.title : item.title_ar}</h4>
             </div>

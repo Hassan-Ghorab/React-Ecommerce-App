@@ -44,12 +44,14 @@ function ProductItem({ productItem, children }) {
 
           {children}
         </div>
-        <img
-          src={productItem.image}
-          loading="lazy"
-          className={styles.image}
-          alt={language === 'en' ? productItem.title : productItem.title_ar}
-        />
+        <div   className={styles.productItemImageContainer}>
+          <img
+            src={productItem.image}
+            loading="lazy"
+            className={styles.image}
+            alt={language === 'en' ? productItem.title : productItem.title_ar}
+          />
+        </div>
       </div>
 
       <div className={styles.cartOperationsContainer}>
@@ -83,10 +85,8 @@ function ProductItem({ productItem, children }) {
         </span>
       </div>
       <div className={styles.productsReviewsContainer}>
-        <ProductReview
-          productReviewsStarts={productItem.reviews.stars}
-        />
-        ({productItem.reviews.numbers})
+        <ProductReview productReviewsStarts={productItem.reviews.stars} />(
+        {productItem.reviews.numbers})
       </div>
     </li>
   );
