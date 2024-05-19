@@ -25,7 +25,7 @@
   margin-bottom: 100px;
 }
 
-.productTitleContainer {
+.productTitleSecondContainer {
   margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
@@ -41,5 +41,14 @@
     display: flex;
     flex-direction: column;
     grid-gap: 40px;
+  }
+
+  .productMainTitle {
+    font-size: 25px;
+  }
+
+  .productTitleSecondContainer button {
+    padding: 10px;
+    width: 100px;
   }
 }

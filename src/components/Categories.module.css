@@ -27,7 +27,6 @@
   width: 20px;
   height: 40px;
   background-color: #db4444;
-  margin-right: 20px;
   border-radius: 3px;
 }
 
@@ -68,4 +67,14 @@
 
 .hr {
   color: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 767px) {
+  .productSubTitle {
+    align-items: flex-start;
+  }
+
+  .productMainTitle {
+    font-size: 25px;
+  }
 }

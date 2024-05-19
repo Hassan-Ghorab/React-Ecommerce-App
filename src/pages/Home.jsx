@@ -78,7 +78,7 @@ function Home() {
           containerRef={flashSalesRef}
           viewAll={flashSalesViewAll}
         >
-          <div className={styles.productTitleContainer}>
+          <div className={styles.productTitleSecondContainer}>
             <div className={styles.productTitleText}>
               <p className={styles.productSubTitle}>
                 {i18n.t('bestSelling.thisMonth')}

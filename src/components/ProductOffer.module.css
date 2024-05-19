@@ -19,9 +19,6 @@
   display: none;
 }
 
-.offerCountdownTimer div {
-}
-
 .productOfferText h4 {
   color: #00ff66;
 }
@@ -46,5 +43,7 @@
   .productOffer {
     flex-direction: column;
     height: 700px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
