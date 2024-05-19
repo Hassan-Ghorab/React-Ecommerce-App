@@ -29,18 +29,13 @@
 }
 
 @media (max-width: 676px) {
-  .productTitleContainer:first-of-type {
+  .productTitleContainer {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
   }
 
-  .productTitleContainer {
-    gap: 20px;
-    align-items: flex-start;
-  }
-
-  .productTitle:first-of-type {
+  .productTitle:first-child {
     flex-direction: column;
     align-items: flex-start;
   }
