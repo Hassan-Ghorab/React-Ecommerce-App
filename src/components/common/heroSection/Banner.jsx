@@ -46,7 +46,12 @@ function Banner() {
           </button>
         </div>
         <div className={styles.bannerImageContainer}>
-          <img className={styles.bannerImage} src={HeroSectionImage} />
+          <img
+            className={styles.bannerImage}
+            src={HeroSectionImage}
+            alt="Iphone 14 photo"
+            loading="lazy"
+          />
         </div>
       </div>
       <div className={styles.bannerBullets}>

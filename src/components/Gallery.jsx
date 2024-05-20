@@ -22,7 +22,7 @@ function Gallery() {
 
         <div className={styles.gallery}>
           <div className={styles.galleryOne}>
-            <img src={playStationImage} />
+            <img src={playStationImage} alt="playstation" loading="lazy" />
             <h4>{i18n.t('featuredGallery.playStation.title')}</h4>
             <p>{i18n.t('featuredGallery.playStation.description')}</p>
             <Link>{i18n.t('shop')}</Link>
@@ -37,13 +37,13 @@ function Gallery() {
 
             <div className={styles.secondGallery}>
               <div className={styles.speakersGallery}>
-                <img src={speakersImage} />
+                <img src={speakersImage} alt="speakers" loading="lazy" />
                 <h4>{i18n.t('featuredGallery.speakers.title')}</h4>
                 <p>{i18n.t('featuredGallery.speakers.description')}</p>
                 <Link>{i18n.t('shop')}</Link>
               </div>
               <div className={styles.PerfumeGallery}>
-                <img src={perfumeImage} />
+                <img src={perfumeImage} alt="perfume" loading="lazy" />
                 <h4>{i18n.t('featuredGallery.perfume.title')}</h4>
                 <p>{i18n.t('featuredGallery.perfume.description')}</p>
                 <Link>{i18n.t('shop')}</Link>

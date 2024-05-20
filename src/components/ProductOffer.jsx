@@ -15,7 +15,12 @@ function ProductOffer() {
           <button>{i18n.t('offer.buyNow')}!</button>
         </div>
         <div>
-          <img className={styles.productOfferImage} src={CategoriesImage} />
+          <img
+            className={styles.productOfferImage}
+            src={CategoriesImage}
+            alt="AEnhance Your Listening Experience"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>

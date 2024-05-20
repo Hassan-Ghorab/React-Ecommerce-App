@@ -78,10 +78,10 @@ function ProductItem({ productItem, children }) {
 
       <div className={styles.productPrice}>
         {productItem.discount !== 0 ? (
-          <span className={styles.productDiscount}>{productItem.discount}</span>
+          <span className={styles.productDiscount}>${productItem.discount}</span>
         ) : null}
         <span className={productItem.discount !== 0 ? styles.falsePrice : null}>
-          {productItem.price}
+          ${productItem.price}
         </span>
       </div>
       <div className={styles.productsReviewsContainer}>
