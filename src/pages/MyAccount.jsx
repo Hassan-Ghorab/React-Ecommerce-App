@@ -152,11 +152,7 @@ function MyAccount() {
               <label htmlFor="address">
                 {language === 'en' ? 'Address' : 'العنوان'}
               </label>
-              <input
-                type="text"
-                placeholder={language === 'en' ? 'your address' : 'عنوانك'}
-                required
-              />
+              <input type="text" name="address" required />
             </div>
           </div>
 
@@ -166,6 +162,7 @@ function MyAccount() {
             </label>
             <input
               type="password"
+              name="password"
               placeholder={
                 language === 'en' ? 'Current Password' : 'كلمة المرور الحالية'
               }
@@ -175,6 +172,7 @@ function MyAccount() {
             />
             <input
               type="password"
+              name="newPassword"
               placeholder={
                 language === 'en' ? 'New Password' : 'كلمة مرور جديدة'
               }
@@ -184,6 +182,7 @@ function MyAccount() {
             />
             <input
               type="password"
+              name="confirmPassword"
               placeholder={
                 language === 'en' ? 'Confirm Password' : 'تأكيد كلمة المرور'
               }
