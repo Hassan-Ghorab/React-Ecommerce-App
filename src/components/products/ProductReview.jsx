@@ -7,10 +7,11 @@ function ProductReview({ productReviewsStarts }) {
   const roundedRating = Math.floor(productReviewsStarts * 2) / 2;
 
   for (let i = 1; i <= 5; i++) {
+
     if (i <= roundedRating) {
       stars.push(
         <svg
-          key={`star-${i}-filled`}
+          key={crypto.randomUUID()}
           width="16"
           height="15"
           viewBox="0 0 16 15"
@@ -26,7 +27,7 @@ function ProductReview({ productReviewsStarts }) {
     ) {
       stars.push(
         <svg
-          key={`star-${i}-half`}
+          key={crypto.randomUUID()}
           width="20"
           height="20"
           viewBox="0 0 20 20"
@@ -47,7 +48,7 @@ function ProductReview({ productReviewsStarts }) {
     } else {
       stars.push(
         <svg
-          key={`star-${i}-empty`}
+          key={crypto.randomUUID()}
           width="16"
           height="15"
           viewBox="0 0 16 15"

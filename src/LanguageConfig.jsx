@@ -299,7 +299,7 @@ const languageResources = {
       },
 
       allProducts: {
-        ourProducts: 'منتجاتنا',
+        ourProducts: 'جميع المنتجات',
         exploreOurProducts: 'استكشاف منتجاتنا',
       },
 

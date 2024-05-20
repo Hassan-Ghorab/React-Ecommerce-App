@@ -46,7 +46,7 @@ function Cart() {
       <ActivePage>
         <Link to="/cart">{i18n.t('cart.header.cart')}</Link>
       </ActivePage>
-      <div className={styles.cartContainer} key={cartItems.id + cartItems.name}>
+      <div className={styles.cartContainer}>
         {cartItems.length !== 0 ? (
           <div className={styles.CartTitles}>
             <h4>{i18n.t('cart.header.product')}</h4>
@@ -59,7 +59,10 @@ function Cart() {
         )}
 
         {items.map((item) => (
-          <div key={item.id + item.name} className={styles.cartItem}>
+          <div
+            key={cartItems.id + crypto.randomUUID()}
+            className={styles.cartItem}
+          >
             <div className={styles.cartInfo}>
               <button onClick={() => handleRemove(item.id)}>
                 <svg

@@ -7,6 +7,7 @@ export const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -17,7 +18,8 @@ export const ProductProvider = ({ children }) => {
       try {
         onValue(dbRef, (snapshot) => {
           const data = snapshot.val() || [];
-          setProducts(data);
+          setProducts(Object.values(data));
+          setFilteredProducts(Object.values(data));
           setLoading(false);
         });
       } catch (error) {
@@ -47,15 +49,37 @@ export const ProductProvider = ({ children }) => {
 
   const randomProducts = getRandomProducts(products, 4);
 
+  const getProductById = (title) => {
+    const lowercaseTitle = title.toLowerCase();
+    return products.find(
+      (product) =>
+        product.title.toLowerCase() === lowercaseTitle ||
+        product.title_ar.toLowerCase() === lowercaseTitle
+    );
+  };
+
+  const handleSearchInput = (searchTerm) => {
+    const lowercaseSearchTerm = searchTerm.toLowerCase();
+    const filtered = products.filter(
+      (product) =>
+        product.title.toLowerCase().includes(lowercaseSearchTerm) ||
+        product.title_ar.toLowerCase().includes(lowercaseSearchTerm)
+    );
+    setFilteredProducts(filtered);
+  };
+
   return (
     <ProductContext.Provider
       value={{
         products,
+        filteredProducts,
         loading,
         error,
         groupedProducts,
         productsCategories,
         randomProducts,
+        getProductById,
+        handleSearchInput,
       }}
     >
       {children}

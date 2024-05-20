@@ -6,6 +6,13 @@ import { useLanguage } from '../context/LanguageContext';
 import i18n from '../../LanguageConfig';
 
 function ProductItem({ productItem, children }) {
+  const { title, title_ar, image, price, id, reviews, discount, status } =
+    productItem;
+
+  // Check if reviews exists before accessing its nested properties
+  const stars = reviews && reviews.stars ? reviews.stars : 0;
+  const reviewNumbers = reviews && reviews.numbers ? reviews.numbers : 0;
+
   const { cartItems, addToCart, removeFromCart } = useCart();
   const { language } = useLanguage();
   const handleAddToCart = () => {
@@ -24,19 +31,14 @@ function ProductItem({ productItem, children }) {
             <div className={styles.productDiscountContainer}>
               {productItem.discount !== 0 && (
                 <span className={styles.productDiscountPercentage}>
-                  {Math.round(
-                    ((productItem.price - productItem.discount) /
-                      productItem.price) *
-                      100
-                  )}
-                  %
+                  {Math.round(((price - discount) / price) * 100)}%
                 </span>
               )}
             </div>
             <div>
               {productItem.status && (
                 <span className={styles.productStatus}>
-                  {language === 'en' ? productItem.status : 'جديد'}
+                  {language === 'en' ? status : 'جديد'}
                 </span>
               )}
             </div>
@@ -46,16 +48,16 @@ function ProductItem({ productItem, children }) {
         </div>
         <div className={styles.productItemImageContainer}>
           <img
-            src={productItem.image}
+            src={image}
             loading="lazy"
             className={styles.image}
-            alt={language === 'en' ? productItem.title : productItem.title_ar}
+            alt={language === 'en' ? title : title_ar}
           />
         </div>
       </div>
 
       <div className={styles.cartOperationsContainer}>
-        {cartItems.some((item) => item.id === productItem.id) ? (
+        {cartItems.some((item) => item.id === id) ? (
           <button
             onClick={() => handleRemoveFromCart(productItem.id)}
             className={styles.removeFromCartButton}
@@ -78,15 +80,16 @@ function ProductItem({ productItem, children }) {
 
       <div className={styles.productPrice}>
         {productItem.discount !== 0 ? (
-          <span className={styles.productDiscount}>${productItem.discount}</span>
+          <span className={styles.productDiscount}>
+            ${productItem.discount}
+          </span>
         ) : null}
         <span className={productItem.discount !== 0 ? styles.falsePrice : null}>
           ${productItem.price}
         </span>
       </div>
       <div className={styles.productsReviewsContainer}>
-        <ProductReview productReviewsStarts={productItem.reviews.stars} />(
-        {productItem.reviews.numbers})
+        <ProductReview productReviewsStarts={stars} />({reviewNumbers})
       </div>
     </li>
   );

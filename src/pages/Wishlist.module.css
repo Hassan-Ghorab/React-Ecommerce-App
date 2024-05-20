@@ -12,10 +12,12 @@
   padding: 10px 40px;
   border: 1px solid #00000080;
   border-radius: 3px;
+  text-align: center;
 }
 
 .wishlistItems {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
   padding: 0 10px;
 }

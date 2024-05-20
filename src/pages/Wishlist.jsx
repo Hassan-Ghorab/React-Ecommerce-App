@@ -51,7 +51,7 @@ function Wishlist() {
         ) : (
           <ul className={styles.wishlistItems}>
             {wishlistItems.map((item) => (
-              <ProductItem key={item.id} productItem={item}>
+              <ProductItem key={item.id + item.title} productItem={item}>
                 <button
                   className={styles.removeButton}
                   onClick={() => handleRemoveFromWishlist(item.id)}
@@ -89,7 +89,10 @@ function Wishlist() {
 
         <ul className={styles.wishlistItems}>
           {randomProducts.map((item) => (
-            <ProductItem key={item.id} productItem={item}>
+            <ProductItem
+              key={item.id + item.title + item.title_ar}
+              productItem={item}
+            >
               <Link
                 className={styles.showProductBtn}
                 to={`/${item.categoryTitle}/${item.title}`}

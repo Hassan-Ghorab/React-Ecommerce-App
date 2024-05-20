@@ -181,14 +181,10 @@
   background-color: #db4444;
 }
 
-.wishListSVG path {
-  fill: #fff;
-  stroke: #000;
-}
-
-.wishListSVGActive path {
-  fill: #db4444;
-  stroke: #fff;
+.mainWishListBtn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #00000080;
 }
 
 .productDetailsDelivery {
@@ -240,6 +236,31 @@
   font-size: 40px;
 }
 
+.showOrWishProduct {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.wishListSVG {
+  fill: #fff;
+}
+
+.wishListSVG path {
+  stroke: #000;
+}
+
+.wishListSVGActive {
+  fill: #db4444;
+}
+
+.wishListSVGActive path {
+  stroke: #db4444;
+}
+
 @media (max-width: 1050px) {
   .productDetailsImagesFirstContainer {
     flex-direction: row;
@@ -255,6 +276,10 @@
   .productDetailsImagesContainer {
     flex-direction: column;
   }
+}
+
+.productDetailsRelatedItems {
+  margin-bottom: 100px;
 }
 
 @media (max-width: 900px) {
@@ -291,8 +316,4 @@
     align-items: start;
     gap: 10px;
   }
-}
-
-.productDetailsRelatedItems {
-  margin-bottom: 100px;
 }

@@ -7,10 +7,9 @@ import i18n from '../../../LanguageConfig';
 import { ProductContext } from '../../context/ProductContext';
 
 function Navbar() {
-  const { searchProducts } = useContext(ProductContext);
+  const { handleSearchInput } = useContext(ProductContext);
   const [openNav, setOpenNav] = useState(false);
   const { isLoggedIn } = useContext(UserAuthContext);
-  const [searchResults, setSearchResults] = useState([]);
 
   function handleOpenNav() {
     setOpenNav(!openNav);
@@ -20,11 +19,9 @@ function Navbar() {
     setOpenNav(false);
   }
 
-  function handleSearchChange(event) {
-    const query = event.target.value;
-    const results = searchProducts(query);
-    setSearchResults(results);
-  }
+  const handleChange = (event) => {
+    handleSearchInput(event.target.value);
+  };
 
   return (
     <div className="container">
@@ -42,6 +39,9 @@ function Navbar() {
             <NavLink to="/" onClick={handleLinkClick}>
               {i18n.t('headerLinks.home')}
             </NavLink>
+            <NavLink to="/ourProducts" onClick={handleLinkClick}>
+              {i18n.t('allProducts.ourProducts')}
+            </NavLink>
             <NavLink to="/about" onClick={handleLinkClick}>
               {i18n.t('headerLinks.about')}
             </NavLink>
@@ -58,33 +58,18 @@ function Navbar() {
                   {i18n.t('headerLinks.login')}
                 </NavLink>
               </>
-            ) : (
-              <NavLink to="/myAccount" onClick={handleLinkClick}>
-                {i18n.t('headerLinks.myAccount')}
-              </NavLink>
-            )}
+            ) : null}
           </div>
+
           <form className={styles.form}>
             <input
               type="text"
               name="search"
               placeholder={i18n.t('searchInput')}
               className={styles.searchInput}
-              onChange={handleSearchChange}
+              onChange={handleChange}
             />
           </form>
-
-          {searchResults.length > 0 && (
-            <div className={styles.searchResults}>
-              <ul>
-                {searchResults.map((result) => (
-                  <li key={result.id}>
-                    <Link to={`/products/${result.id}`}>{result.name}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
 
           <CartOperations />
 
