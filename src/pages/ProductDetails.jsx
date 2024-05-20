@@ -101,11 +101,11 @@ function ProductDetails() {
   return (
     <div dir={i18n.t('dir')}>
       <ActivePage>
-        <span>
+        <span className={styles.productCategory}>
           {language === 'en' ? product.category : product.category_ar}
         </span>
         <span>/</span>
-        <span>{language === 'en' ? product.tile : product.title_ar}</span>
+        <span>{language === 'en' ? product.title : product.title_ar}</span>
       </ActivePage>
       <div className="container">
         <div className={styles.productDetailsContainer}>
@@ -119,7 +119,7 @@ function ProductDetails() {
                   <img
                     className={styles.productDetailsImage}
                     src={product.image}
-                    alt={language === 'en' ? product.tile : product.title_ar}
+                    alt={language === 'en' ? product.title : product.title_ar}
                     onClick={() => handleThumbnailClick(product.image)}
                   />
                 </div>
@@ -129,7 +129,7 @@ function ProductDetails() {
               <img
                 className={styles.mainProductDetailsImage}
                 src={mainImage || product.image}
-                alt={language === 'en' ? product.tile : product.title_ar}
+                alt={language === 'en' ? product.title : product.title_ar}
               />
             </div>
           </div>
@@ -139,12 +139,14 @@ function ProductDetails() {
 
             <div className={styles.productsDefaultReviewsContainer}>
               <ProductReview productReviewsStarts={product.reviews.stars} />
-              <span>
-                ({product.reviews.numbers}
+              <span className={styles.numberOfReviews}>
+                ({product.reviews.numbers}{' '}
                 {i18n.t('productDetailsPage.reviews')})
               </span>
-              <span>|</span>
-              <span>{i18n.t('productDetailsPage.inStock')}</span>
+              <span className={styles.divider}>|</span>
+              <span className={styles.inStock}>
+                {i18n.t('productDetailsPage.inStock')}
+              </span>
             </div>
             <h4>${product.discount || product.price}.00</h4>
             <p className={styles.productDetailsDescription}>
@@ -353,7 +355,7 @@ function ProductDetails() {
           </div>
         </div>
 
-        <div>
+        <div className={styles.productDetailsRelatedItems}>
           <h2 className={styles.productTitle}>
             {i18n.t('productDetailsPage.relatedItems')}
           </h2>

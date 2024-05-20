@@ -19,14 +19,13 @@ import { UserAuthProvider } from './components/context/UserAuthContext';
 import { ProductProvider } from './components/context/ProductContext';
 import { LanguageProvider } from './components/context/LanguageContext';
 
-
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timeout);
   }, []);

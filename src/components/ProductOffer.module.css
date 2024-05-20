@@ -19,6 +19,10 @@
   display: none;
 }
 
+.productOfferText p {
+  font-size: 11px;
+}
+
 .productOfferText h4 {
   color: #00ff66;
 }

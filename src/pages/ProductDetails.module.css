@@ -66,6 +66,20 @@
   gap: 13px;
 }
 
+.productCategory {
+  color: #0000008f;
+  text-transform: capitalize;
+}
+
+.numberOfReviews,
+.divider {
+  color: #0000008f;
+}
+
+.inStock {
+  color: #00ff66;
+}
+
 .productsDefaultReviewsContainer {
   display: flex;
   gap: 15px;
@@ -208,6 +222,7 @@
   font-weight: 600;
   margin-bottom: 20px;
   gap: 10px;
+  color: #db4444;
 }
 
 .productTitle::before {
@@ -276,4 +291,8 @@
     align-items: start;
     gap: 10px;
   }
+}
+
+.productDetailsRelatedItems {
+  margin-bottom: 100px;
 }

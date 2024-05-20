@@ -9,13 +9,13 @@ export const useLanguage = () => {
 };
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLang] = useState(() => {
+  const [language, setLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem('language');
-    return savedLanguage || i18n.language;
+    return savedLanguage;
   });
 
   const changeLanguage = (selectedLanguage) => {
-    setLang(selectedLanguage);
+    setLanguage(selectedLanguage);
     localStorage.setItem('language', selectedLanguage);
     i18n.changeLanguage(selectedLanguage);
     window.location.reload();

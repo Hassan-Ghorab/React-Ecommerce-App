@@ -44,7 +44,7 @@ function ProductItem({ productItem, children }) {
 
           {children}
         </div>
-        <div   className={styles.productItemImageContainer}>
+        <div className={styles.productItemImageContainer}>
           <img
             src={productItem.image}
             loading="lazy"
@@ -72,7 +72,7 @@ function ProductItem({ productItem, children }) {
         )}
       </div>
 
-      <h4 className={styles.productName}>
+      <h4 className={styles.productTitle}>
         {language === 'en' ? productItem.title : productItem.title_ar}
       </h4>
 

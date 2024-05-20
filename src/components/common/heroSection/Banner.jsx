@@ -1,5 +1,5 @@
 import styles from './Banner.module.css';
-import HeroSectionImage from '../../../assets/HeroSection-Image.jpg';
+import HeroSectionImage from '../../../assets/HeroSection-Image.png';
 import i18n from '../../../LanguageConfig';
 function Banner() {
   return (
