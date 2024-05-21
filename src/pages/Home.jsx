@@ -129,7 +129,6 @@ function Home() {
               text={i18n.t('buttons.viewAllProductsButton')}
             />
           </div>
-          <hr className={styles.hr} />
         </div>
       </div>
 
