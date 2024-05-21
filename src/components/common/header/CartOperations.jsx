@@ -5,7 +5,7 @@ import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
 import { UserAuthContext } from '../../context/UserAuthContext';
 import { useNavigate } from 'react-router-dom';
-import i18n from '../../../LanguageConfig'; 
+import i18n from '../../../LanguageConfig';
 function CartOperations() {
   const [openPersonOperations, setOpenPersonOperations] = useState(false);
   const { totalCartCount } = useCart();
@@ -25,6 +25,7 @@ function CartOperations() {
   const handleLogout = () => {
     logout();
     navigate('/');
+    handleLinkClick();
   };
 
   return (

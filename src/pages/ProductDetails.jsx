@@ -210,7 +210,10 @@ function ProductDetails() {
                 )}
               </div>
 
-              <button className={styles.mainWishListBtn} onClick={() => handleToggleWishlist(product)}>
+              <button
+                className={styles.mainWishListBtn}
+                onClick={() => handleToggleWishlist(product)}
+              >
                 <svg
                   width="42"
                   height="42"
@@ -397,7 +400,7 @@ function ProductDetails() {
                         </button>
                         <Link
                           className={styles.cartBtn}
-                          to={`/${product.categoryTitle}/${product.title}`}
+                          to={`/${relatedProduct.categoryTitle}/${relatedProduct.title}`}
                         >
                           <svg
                             width="34"
