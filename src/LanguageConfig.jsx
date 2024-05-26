@@ -9,7 +9,7 @@ const languageResources = {
     translation: {
       dir: 'ltr',
       CTA: 'Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%',
-      shop: 'ShopNow!',
+      shop: 'Shop Now!',
 
       headerLinks: {
         home: 'Home',
@@ -28,7 +28,7 @@ const languageResources = {
         logout: 'Logout',
       },
 
-      searchInput: 'Search...',
+      searchInput: 'What are you looking for?',
 
       heroSection: {
         categoriesLinks: {
@@ -268,7 +268,7 @@ const languageResources = {
         logout: 'تسجيل الخروج',
       },
 
-      searchInput: 'بحث...',
+      searchInput: 'ما الذي تبحث عنه؟',
 
       heroSection: {
         categoriesLinks: {
