@@ -34,7 +34,7 @@
 
 .form {
   display: flex;
-  margin-left: 150px;
+  margin-left: 40px;
 }
 
 .searchInput {
@@ -51,22 +51,18 @@
 }
 
 @media (max-width: 1050px) {
-  .mainNav {
-    gap: 15px;
+  .logo {
+    margin-right: 20px;
   }
 
-  .searchInput {
-    width: 200px;
+  .mainNav {
+    gap: 15px;
   }
 }
 
 @media (max-width: 950px) {
-  .logo {
-    margin-right: 30px;
-  }
-
   .mainNav {
-    display: flex;
+    font-size: 12px;
     gap: 10px;
   }
 }
