@@ -13,6 +13,7 @@ import { useLanguage } from '../components/context/LanguageContext';
 import i18n from '../LanguageConfig';
 import { Link } from 'react-router-dom';
 import ProductOperations from '../components/products/ProductOperations';
+import { getImageUrl } from '../utils/image-utils';
 
 function ProductDetails() {
   const { language } = useLanguage();
@@ -97,7 +98,7 @@ function ProductDetails() {
   };
 
   const handleThumbnailClick = () => {
-    setMainImage(product.image);
+    setMainImage(getImageUrl(product.image));
   };
 
   return (
@@ -120,7 +121,7 @@ function ProductDetails() {
                 >
                   <img
                     className={styles.productDetailsImage}
-                    src={product.image}
+                    src={getImageUrl(product.image)}
                     alt={language === 'en' ? product.title : product.title_ar}
                     onClick={() => handleThumbnailClick(product.image)}
                   />
@@ -130,7 +131,7 @@ function ProductDetails() {
             <div className={styles.mainProductDetailsImageContainer}>
               <img
                 className={styles.mainProductDetailsImage}
-                src={mainImage || product.image}
+                src={mainImage || getImageUrl(product.image)}
                 alt={language === 'en' ? product.title : product.title_ar}
               />
             </div>

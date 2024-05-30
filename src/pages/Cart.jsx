@@ -6,6 +6,7 @@ import ActivePage from '../components/ActivePage';
 import styles from './Cart.module.css';
 import { useLanguage } from '../components/context/LanguageContext';
 import i18n from '../LanguageConfig';
+import { getImageUrl } from '../utils/image-utils';
 
 function Cart() {
   const { language } = useLanguage();
@@ -84,7 +85,7 @@ function Cart() {
               </button>
               <div className={styles.cartImageContainer}>
                 <img
-                  src={item.image}
+                  src={getImageUrl(item.image)}
                   alt={language === 'en' ? item.title : item.title_ar}
                   className={styles.cartImage}
                 />
