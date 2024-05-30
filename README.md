@@ -10,3 +10,4 @@ Currently, two official plugins are available:
 
 # [Live Demo](https://react-ecommerce-app-xd3q-git-main-hassan-ghorabs-projects.vercel.app/) 
 ## be careful all inputs are working and send data to me in firebase the inputs in checkout and contact are sending data as a real web app.
+## sometimes the links of the images get wrong because it needs to be changed and hosted to the firebase so if that happened just let me know.
