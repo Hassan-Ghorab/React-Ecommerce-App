@@ -10,7 +10,7 @@ function ProductOffer() {
           <h4>{i18n.t('offer.greenTitle')}</h4>
           <h2>{i18n.t('offer.title')}</h2>
           <div className={styles.offerCountdownTimer}>
-            <CountdownTimer time={'June 15, 2024 00:00:00'} />
+            <CountdownTimer time={'July 15, 2024 00:00:00'} />
           </div>
           <button>{i18n.t('offer.buyNow')}!</button>
         </div>

@@ -54,7 +54,7 @@ function Home() {
                 {i18n.t('FlashSales.flashSales')}
               </h2>
             </div>
-            <CountdownTimer time={'June 15, 2024 00:00:00'} />
+            <CountdownTimer time={'July 15, 2024 00:00:00'} />
           </ProductTitle>
         </Product>
         <div className="container">
