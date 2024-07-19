@@ -23,8 +23,6 @@ function ProductItem({ productItem, children }) {
     removeFromCart(productItem.id);
   };
 
-  console.log(getImageUrl(image));
-
   return (
     <li className={styles.productContainer}>
       <div className={styles.productDetails}>

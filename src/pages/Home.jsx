@@ -1,6 +1,6 @@
 import { useState, useRef, useContext } from 'react';
 import ProductTitle from '../components/products/ProductTitle';
-import CountdownTimer from '../components/products/CountdownTimer';
+
 import HeroSection from '../components/common/heroSection/HeroSection';
 import Product from '../components/products/Products';
 import styles from './Home.module.css';
@@ -14,15 +14,15 @@ import i18n from '../LanguageConfig';
 import { ProductContext } from '../components/context/ProductContext';
 
 function Home() {
+  const [bestSellingViewAll, setBestSellingViewAll] = useState(false);
+  const [flashSalesViewAll, setFlashSalesViewAll] = useState(false);
+  const [exploreViewAll, setExploreViewAll] = useState(false);
+
   const { groupedProducts } = useContext(ProductContext);
   const bestSellingRef = useRef(null);
   const flashSalesRef = useRef(null);
   const exploreRef = useRef(null);
   const productWidth = 250;
-
-  const [bestSellingViewAll, setBestSellingViewAll] = useState(false);
-  const [flashSalesViewAll, setFlashSalesViewAll] = useState(false);
-  const [exploreViewAll, setExploreViewAll] = useState(false);
 
   const scrollToNext = (ref) => {
     ref.current.scrollLeft += productWidth;
@@ -31,6 +31,8 @@ function Home() {
   const scrollToPrevious = (ref) => {
     ref.current.scrollLeft -= productWidth;
   };
+
+
 
   return (
     <div dir={i18n.t('dir')}>
@@ -54,7 +56,6 @@ function Home() {
                 {i18n.t('FlashSales.flashSales')}
               </h2>
             </div>
-            <CountdownTimer time={'July 15, 2024 00:00:00'} />
           </ProductTitle>
         </Product>
         <div className="container">
